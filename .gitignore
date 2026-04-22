@@ -1,0 +1,38 @@
+# dependencies
+node_modules/
+dist/
+coverage/
+
+# environment variables — NEVER commit these
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# editor & OS
+.DS_Store
+.vscode/
+.idea/
+Thumbs.db
+
+# logs
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# build cache
+.data/
+*.tsbuildinfo
+
+# mobile sub-project — has its own .gitignore
+finance-tracker-mobile/node_modules/
+finance-tracker-mobile/.expo/
+finance-tracker-mobile/dist/
+finance-tracker-mobile/web-build/
+finance-tracker-mobile/.env
+finance-tracker-mobile/.env.local
+finance-tracker-mobile/.env.*.local
+finance-tracker-mobile/ios/
+finance-tracker-mobile/android/
