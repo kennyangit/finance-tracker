@@ -59,28 +59,10 @@ export function useDashboard(): {
       .slice(0, 5);
   }, [summary]);
 
-  // Income trend for the last 6 months
+  // Income trend for the last 6 months (now computed in the API)
   const incomeTrend = useMemo(() => {
-    const trends: { month: string; amount: number }[] = [];
-    const now = new Date();
-
-    for (let i = 5; i >= 0; i--) {
-      const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
-      const monthStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-
-      const monthTransactions = transactions.filter(t => t.date.startsWith(monthStr));
-      const income = monthTransactions
-        .filter(t => t.type === 'income')
-        .reduce((sum, t) => sum + t.value, 0);
-
-      trends.push({
-        month: monthStr,
-        amount: income
-      });
-    }
-
-    return trends;
-  }, [transactions]);
+    return summary?.incomeTrend || [];
+  }, [summary]);
 
   return {
     summary,

@@ -45,6 +45,7 @@ export interface MonthlySummary {
     amount: number;
     percentage: number;
   }[];
+  incomeTrend?: { month: string; amount: number }[];
 }
 
 export interface TransactionsFilters {

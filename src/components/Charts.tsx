@@ -29,7 +29,7 @@ function darkenColor(hex: string, amount: number): string {
 const tooltipBase: React.CSSProperties = {
   borderRadius: '0.75rem',
   padding: '10px 16px',
-  color: '#fff',
+  color: '#0A0A0A',
   fontSize: '0.875rem',
   fontWeight: 500,
   boxShadow: '0 8px 24px rgba(0, 0, 0, 0.35)',
@@ -41,7 +41,7 @@ const tooltipBase: React.CSSProperties = {
 /* ─── Custom Tooltip: BarChart (Saldo Diário) ─── */
 function BalanceTooltip({ active, payload, label }: any) {
   if (!active || !payload?.length) return null;
-  const color = payload[0]?.color || payload[0]?.fill || '#6366f1';
+  const color = payload[0]?.color || payload[0]?.fill || '#FFFFFF';
   return (
     <div style={{ ...tooltipBase, background: color, border: `1px solid ${darkenColor(color, 0.25)}` }}>
       <p style={{ margin: 0, fontWeight: 700, marginBottom: 2 }}>Dia {label}</p>
@@ -66,7 +66,7 @@ function IncomeTrendTooltip({ active, payload, label }: any) {
 function CategoryTooltip({ active, payload }: any) {
   if (!active || !payload?.length) return null;
   const entry = payload[0];
-  const color = entry?.payload?.color || entry?.payload?.fill || '#8b5cf6';
+  const color = entry?.payload?.color || entry?.payload?.fill || '#FFFFFF';
   return (
     <div style={{ ...tooltipBase, background: color, border: `1px solid ${darkenColor(color, 0.25)}` }}>
       <p style={{ margin: 0, fontWeight: 700, marginBottom: 2 }}>{entry.payload.name}</p>

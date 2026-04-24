@@ -76,6 +76,7 @@ export function SearchBar({
             background: 'transparent',
             border: 'none',
             outline: 'none',
+            boxShadow: 'none',
             fontSize: '1rem',
             color: 'var(--text-primary)',
             minWidth: 0

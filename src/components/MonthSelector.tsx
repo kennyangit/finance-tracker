@@ -108,7 +108,7 @@ export function MonthSelector({
     whiteSpace: 'nowrap',
     fontSize: '0.875rem',
     fontWeight: isSelected ? 600 : 400,
-    color: isSelected ? 'white' : 'var(--text-secondary)',
+    color: isSelected ? '#0A0A0A' : 'var(--text-secondary)',
     background: isSelected
       ? 'linear-gradient(135deg, var(--primary), var(--primary-dark))'
       : 'var(--bg-subtle)',

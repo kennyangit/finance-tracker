@@ -127,14 +127,14 @@ export default function App() {
                         padding: '0.5rem 1rem',
                         borderRadius: '0.5rem',
                         border: 'none',
-                        background: isActive ? 'var(--primary)' : 'transparent',
-                        color: isActive ? 'white' : 'var(--text-secondary)',
+                        backgroundColor: isActive ? 'var(--primary)' : 'transparent',
+                        color: isActive ? '#0A0A0A' : 'var(--text-secondary)',
                         fontWeight: isActive ? 600 : 400,
                         fontSize: '0.875rem',
                         cursor: 'pointer',
                         transition: 'all 150ms ease',
                       }}
-                      whileHover={!isActive ? { backgroundColor: 'rgba(124, 58, 237, 0.1)' } : {}}
+                      whileHover={!isActive ? { backgroundColor: 'rgba(255, 255, 255, 0.06)' } : {}}
                       whileTap={{ scale: 0.96 }}
                     >
                       {item.icon}

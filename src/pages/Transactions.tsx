@@ -160,7 +160,8 @@ export function Transactions() {
   };
 
   const searchBarStyle: React.CSSProperties = {
-    width: '280px'
+    flex: '1 1 350px',
+    minWidth: '350px'
   };
 
   const buttonStyle: React.CSSProperties = {
@@ -206,7 +207,7 @@ export function Transactions() {
     borderRadius: '0.5rem',
     border: 'none',
     background: active ? 'var(--primary)' : 'var(--bg-subtle)',
-    color: active ? 'white' : 'var(--text-primary)',
+    color: active ? '#0A0A0A' : 'var(--text-primary)',
     fontSize: '0.75rem',
     fontWeight: 500,
     cursor: 'pointer',
@@ -218,7 +219,7 @@ export function Transactions() {
     borderRadius: '0.25rem',
     border: 'none',
     background: active ? 'var(--primary)' : 'var(--bg-subtle)',
-    color: active ? 'white' : 'var(--text-primary)',
+    color: active ? '#0A0A0A' : 'var(--text-primary)',
     fontSize: '0.75rem',
     cursor: 'pointer',
     transition: 'all 0.2s'
@@ -275,7 +276,7 @@ export function Transactions() {
               style={{
                 ...buttonStyle,
                 background: 'var(--primary)',
-                color: 'white'
+                color: '#0A0A0A'
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -300,7 +301,7 @@ export function Transactions() {
             style={{
               ...buttonStyle,
               background: showFilters ? 'var(--primary)' : undefined,
-              color: showFilters ? 'white' : undefined
+              color: showFilters ? '#0A0A0A' : undefined
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -362,8 +363,8 @@ export function Transactions() {
               transition={{ duration: 0.2 }}
               style={{ overflow: 'hidden' }}
             >
-              <motion.div style={filterPanelStyle} variants={itemVariants}>
-                <motion.div style={filterSectionStyle} variants={itemVariants}>
+              <motion.div style={filterPanelStyle}>
+                <motion.div style={filterSectionStyle}>
                   <span style={filterLabelStyle}>Tipo</span>
                   <div style={{ display: 'flex', gap: '0.5rem' }}>
                     <motion.button
@@ -393,7 +394,7 @@ export function Transactions() {
                   </div>
                 </motion.div>
 
-                <motion.div style={filterSectionStyle} variants={itemVariants}>
+                <motion.div style={filterSectionStyle}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span style={filterLabelStyle}>Categorias</span>
                     {filters.categories && filters.categories.length > 0 && (
@@ -437,10 +438,12 @@ export function Transactions() {
           )}
         </AnimatePresence>
 
-        <MonthSelector
-          selectedMonth={selectedMonth}
-          onMonthChange={setSelectedMonth}
-        />
+        <div style={{ marginTop: '1.5rem' }}>
+          <MonthSelector
+            selectedMonth={selectedMonth}
+            onMonthChange={setSelectedMonth}
+          />
+        </div>
       </motion.div>
 
       {loading ? (
@@ -471,7 +474,7 @@ export function Transactions() {
               style={{
                 ...buttonStyle,
                 background: 'var(--primary)',
-                color: 'white'
+                color: '#0A0A0A'
               }}
             >
               <Plus size={16} />
@@ -492,7 +495,7 @@ export function Transactions() {
             }}
             variants={itemVariants}
           >
-            Mostrando {transactions.length} transação{transactions.length !== 1 ? 's' : ''}
+            Mostrando {transactions.length} {transactions.length === 1 ? 'transação' : 'transações'}
           </motion.p>
           <AnimatePresence mode="popLayout">
             {transactions.map(transaction => (

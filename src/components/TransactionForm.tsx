@@ -403,7 +403,7 @@ export function TransactionForm({
                       : 'var(--primary)',
                     color: isSubmitting || !isDirty || !isValid
                       ? 'var(--text-tertiary)'
-                      : 'white',
+                      : '#0A0A0A',
                     fontWeight: 600,
                     cursor: isSubmitting || !isDirty || !isValid ? 'not-allowed' : 'pointer',
                     transition: 'all 0.2s'
