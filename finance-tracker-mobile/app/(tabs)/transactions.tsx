@@ -109,7 +109,7 @@ export default function TransactionsScreen() {
           refreshing={refreshing}
           ListHeaderComponent={
             <Text style={styles.resultCount}>
-              {transactions.length} transação{transactions.length !== 1 ? 's' : ''}
+              {transactions.length} {transactions.length === 1 ? 'transação' : 'transações'}
             </Text>
           }
         />
@@ -131,12 +131,12 @@ const styles = StyleSheet.create({
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   title: { fontSize: fontSize['2xl'], fontWeight: fontWeight.bold, color: colors.textPrimary },
   addButton: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, backgroundColor: colors.primary, paddingHorizontal: spacing.lg, paddingVertical: spacing.sm, borderRadius: borderRadius.sm },
-  addButtonText: { color: '#fff', fontSize: fontSize.sm, fontWeight: fontWeight.semibold },
+  addButtonText: { color: '#0A0A0A', fontSize: fontSize.sm, fontWeight: fontWeight.semibold },
   filterRow: { flexDirection: 'row', gap: spacing.sm },
   filterChip: { paddingHorizontal: spacing.md, paddingVertical: spacing.sm, borderRadius: borderRadius.full, backgroundColor: colors.bgSubtle },
   filterChipActive: { backgroundColor: colors.primary },
   filterChipText: { fontSize: fontSize.xs, color: colors.textSecondary, fontWeight: fontWeight.medium },
-  filterChipTextActive: { color: '#fff', fontWeight: fontWeight.semibold },
+  filterChipTextActive: { color: '#0A0A0A', fontWeight: fontWeight.semibold },
   sortChip: { paddingHorizontal: spacing.md, paddingVertical: spacing.xs, borderRadius: borderRadius.sm, backgroundColor: 'transparent' },
   sortChipActive: { backgroundColor: colors.bgSubtle },
   sortChipText: { fontSize: fontSize.xs, color: colors.textMuted, fontWeight: fontWeight.medium },

@@ -142,6 +142,26 @@ class TransactionApiService {
       percentage: totalExpenses > 0 ? (amount / totalExpenses) * 100 : 0
     }));
 
+    // Calculate income trend for the last 6 months ending in the selected month
+    const incomeTrend: { month: string; amount: number }[] = [];
+    const [year, m] = month.split('-').map(Number);
+    const selectedDate = new Date(year, m - 1, 1);
+    
+    for (let i = 5; i >= 0; i--) {
+      const date = new Date(selectedDate.getFullYear(), selectedDate.getMonth() - i, 1);
+      const monthStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+
+      const mTrans = result.data.filter(t => t.date.startsWith(monthStr));
+      const mIncome = mTrans
+        .filter(t => t.type === 'income')
+        .reduce((sum, t) => sum + t.value, 0);
+
+      incomeTrend.push({
+        month: monthStr,
+        amount: mIncome
+      });
+    }
+
     return {
       success: true,
       data: {
@@ -149,7 +169,8 @@ class TransactionApiService {
         totalExpenses,
         balance,
         savingsRate,
-        categoryBreakdown
+        categoryBreakdown,
+        incomeTrend
       }
     };
   }

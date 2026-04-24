@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     color: colors.textSecondary,
   },
   pillTextSelected: {
-    color: '#ffffff',
+    color: '#0A0A0A',
     fontWeight: fontWeight.semibold,
   },
 });

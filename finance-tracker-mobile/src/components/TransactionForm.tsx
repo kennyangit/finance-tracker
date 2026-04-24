@@ -511,7 +511,7 @@ const styles = StyleSheet.create({
     color: colors.textSecondary,
   },
   chipTextActive: {
-    color: '#ffffff',
+    color: '#0A0A0A',
     fontWeight: fontWeight.semibold,
   },
   buttonRow: {
@@ -546,6 +546,6 @@ const styles = StyleSheet.create({
   submitButtonText: {
     fontSize: fontSize.md,
     fontWeight: fontWeight.semibold,
-    color: '#ffffff',
+    color: '#0A0A0A',
   },
 });
