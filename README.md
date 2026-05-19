@@ -1,4 +1,4 @@
-# Controle Financeiro
+# Controle Financeiro Pessoal
 
 Sistema de gerenciamento financeiro pessoal com foco no controle mensal de receitas e despesas. Disponível em versão **web** (React + Vite) e **mobile** (React Native + Expo).
 
@@ -28,6 +28,18 @@ Sistema de gerenciamento financeiro pessoal com foco no controle mensal de recei
 - React Native Gifted Charts (gráficos)
 - React Hook Form + Zod (formulários)
 - Supabase (mesmo banco de dados)
+
+## Visualizações da aplicação
+
+### Desktop
+- Dashboard <br> <img align="center" width="1920" height="1231" alt="Image" src="https://github.com/user-attachments/assets/1835ac2e-ed00-4360-a035-35a66a517473" />
+- Transações <br> <img align="center" width="1919" height="906" alt="Image" src="https://github.com/user-attachments/assets/59857424-c6c9-4f45-9d61-1a3276469fa9" />
+<br>
+
+### Mobile
+- Dashboard <br>
+  <table><tr><td><img width="300" alt="Image" src="https://github.com/user-attachments/assets/f32b6ff7-68a1-475c-ba25-ddb0b681c9cb" /></td><td>&nbsp;&nbsp;&nbsp;</td><td><img width="300" alt="Image" src="https://github.com/user-attachments/assets/53a261d2-1eb5-4a64-864f-b5f7851e4a58" /></td></tr></table>
+- Transações <br> <img width="300" alt="Image" src="https://github.com/user-attachments/assets/0fcc464b-9c80-47e6-880d-3a05812d617d" />
 
 ## Estrutura do Projeto
 
@@ -62,7 +74,7 @@ Sistema de gerenciamento financeiro pessoal com foco no controle mensal de recei
 
 ### Pré-requisitos
 
-- Node.js 18+
+- Node.js
 - Conta no [Supabase](https://supabase.com)
 
 ### Banco de Dados (Supabase)
